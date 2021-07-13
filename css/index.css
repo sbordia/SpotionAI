@@ -1,0 +1,183 @@
+html {
+	scroll-behavior: smooth;
+}
+body::before {
+	background: url('https://i.pinimg.com/originals/4c/9c/45/4c9c457205dbbf4229753b1755866258.gif') center center;
+	background-size: cover;
+	position: absolute;
+	height: 270vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .2;
+	z-index: -100;
+    content: "";
+}
+
+nav {
+	position: fixed;
+	background-color: white;
+}
+
+#navbar-main {
+	top: 0;
+	width: 100%;
+	transition: top 0.3s;
+    background-color: rgba(210, 255, 210, 0.5);
+  }
+
+.logo-text {
+	font-size: 2rem;
+	color: #006400;
+}
+
+a.nav-link {
+	font-size: 1.5rem;
+	margin: 0 0.8rem;
+}
+
+.nav-link  {
+    color: #006400;
+	border-radius: 15px !important;
+	transition: 0.5s;
+}
+
+.nav-link:hover {
+	background-color: #d2ffd2
+}
+
+.navbar-brand {
+ position: relative;
+}
+
+.content-container {
+    height: 90vh;
+    /* border: 2px solid red; */
+}
+
+.col-sm-3 {
+	/* border: 2px solid red; */
+	height: 50vh;
+}
+
+.form-button {
+	margin-top: 0.3rem;
+}
+
+.logo-text {
+	margin-left: 1rem;
+	font-size: 2.3rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.separator {
+	height: 10rem;
+}
+
+hr { 
+	margin-bottom: 5rem;
+}
+
+.dk-gr {
+	color: #006400;
+}
+
+.grey {
+	color: 	#484848
+  }
+
+.dk-red {
+	color: #4d0000
+}
+
+.hover-effect {
+	border-radius: 20px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	transition: all .25s;
+}
+
+.hover-effect:hover {
+	background-color: #006400;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.hover-effect {
+	margin: 1rem auto 0 auto;
+	border: 2px solid #006400;
+	font-size: 1.3rem;
+	color: #006400;
+}
+
+.active {
+	background-color: transparent !important;
+	color: #006400 !important;
+}
+
+.cover .nav-link .active {
+background-color: red ;
+}
+
+.separator {
+    height: 30rem;
+}
+
+.f {
+    border: 2px solid red;
+}
+
+.hidden {
+    display: none;
+}
+
+#preview  {
+    margin-top: 1rem;
+}
+
+.tab-content {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-pills {
+    padding: 0 !important;
+}
+
+
+.nav-pills li {
+    margin: 0 !important;
+}
+
+.nav-pills a {
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.nav-pills a:hover {
+    background-color: transparent;
+}
+
+.emotionResults {
+    padding: 3rem;
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+.qr-code {
+	height: 300px;
+}
+
+.results h1 {
+	font-size: 5rem;
+}
+p.lead {
+	font-size: 3rem !important;
+}

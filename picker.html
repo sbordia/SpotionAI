@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<title>Genre Picker</title>
+<style>
+#main {
+width: 60%;
+margin: auto;
+padding: 10px;
+background-color: lightgreen;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+padding: 5px;
+height: 80px;
+}
+
+label {
+width: 150px;
+display: inline-block;
+}
+
+
+
+.jumbotron {
+            background: transparent !important;
+        }
+
+        .jumbotron img {
+            max-height: 20rem;
+        }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+
+<link rel="stylesheet" href="./css/genrestyle.css">
+<body>
+  <nav class="navbar sticky-top navbar-expand-sm" id="navbar-main">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo.png" width="60" height="60" class="d-inline-block align-middle bounce-logo" alt="">
+            <p class="d-inline align-middle logo-text effect-underline">Spotion</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="picker.html">Genre Picker</a>
+                </li>
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="jam.html" target="_blank">Jam</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="cover">
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-sm-8 d-flex align-items-center">
+                  <h1 class="display-1 text-center" style="color: #006400;">Genre Picker</h1>
+              </div>
+              <div class="col-sm-4 d-flex justify-content-center">
+                  <img src="./img/logo.png" alt="" class="img-fluid">
+              </div>
+
+
+          </div>
+      </div>
+  </div>
+
+<div id="main">
+  <p class="lead">Need help choosing a genre? No worries!</p>
+
+<form  id="picker">
+<p>What is your favourite weather?</p>
+<label><input type="radio" name="weather" id="sun" value="1" />Sunshine</label>
+<label><input type="radio" name="weather" id="rain" value="2" />Raining</label>
+<label><input type="radio" name="weather" id="cloud" value="3" />Cloudy</label>
+
+<p>What do you do at the weekend?</p>
+<label><input type="radio" name="activity" id="sport" value="1" />Play sports</label>
+<label><input type="radio" name="activity" id="party" value="2" />Party</label>
+<label><input type="radio"  name="activity" id="study" value="3" />Study</label>
+
+<p>What is your favourite subject at school?</p>
+<label><input type="radio" name="subj" id="math" value="1" />Maths</label>
+<label><input type="radio" name="subj" id="sci" value="2" />Science</label>
+<label><input type="radio" name="subj" id="art" value="3" />Art</label>
+
+<br>
+<button type="submit" class="hover-effect btn mt-4" value="Submit">Submit</button>
+
+</form>
+
+<p id="answer"></p>
+<p id="answer2"></p>
+</div>
+<script>
+	   document.getElementById("picker").onsubmit=function() {
+	   
+	   
+	   weather = parseInt(document.querySelector('input[name = "weather"]:checked').value);  
+	  
+	  activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
+	   
+	  subj = parseInt(document.querySelector('input[name = "subj"]:checked').value);
+	   
+	   total= weather + activity + subj;
+	   
+	  
+	   document.getElementById("answer").innerHTML = total;	   
+
+	   if(total == 3) {
+document.getElementById("answer2").innerHTML = "Country Music";
+}
+	   
+ if(total == 4) {
+document.getElementById("answer2").innerHTML = "Indie Music";
+}
+
+ if(total == 5) {
+document.getElementById("answer2").innerHTML = "Folk Music";
+}
+
+ if(total == 6) {
+document.getElementById("answer2").innerHTML = "Blues";
+}
+
+ if(total == 7) {
+document.getElementById("answer2").innerHTML = "Punk Rock";
+}
+
+ if(total == 8) {
+document.getElementById("answer2").innerHTML = "Pop Music";
+}
+
+ if(total == 9) {
+document.getElementById("answer2").innerHTML = "Classical Music";
+}
+
+	   return false; 
+	   }
+</script>
+
+<script>
+	   document.getElementById("picker").onsubmit=function() {
+	   
+	   if(document.querySelector('input[name = "weather"]:checked') &&  document.querySelector('input[name = "activity"]:checked') && document.querySelector('input[name = "subj"]:checked')){
+	   
+	   weather = parseInt(document.querySelector('input[name = "weather"]:checked').value);  
+	  
+	  activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
+	   
+	  subj = parseInt(document.querySelector('input[name = "subj"]:checked').value);
+	   
+	   total= weather + activity + subj;
+	   
+	  
+	   document.getElementById("answer").innerHTML = total;	   
+
+	   if(total == 3) {
+document.getElementById("answer2").innerHTML = "Country Music";
+}
+	   
+ if(total == 4) {
+document.getElementById("answer2").innerHTML = "Indie Music";
+}
+
+ if(total == 5) {
+document.getElementById("answer2").innerHTML = "Folk Music";
+}
+
+ if(total == 6) {
+document.getElementById("answer2").innerHTML = "Blues";
+}
+
+ if(total == 7) {
+document.getElementById("answer2").innerHTML = "Punk Rock";
+}
+
+ if(total == 8) {
+document.getElementById("answer2").innerHTML = "Pop Music";
+}
+
+ if(total == 9) {
+document.getElementById("answer2").innerHTML = "Classical Music";
+}
+}
+
+else {
+alert("Fill out all questions before submitting.");
+}
+		   
+	   return false; 
+	   }
+</script>
+
+<script>
+ document.getElementById("picker").onsubmit=function() {
+	   if(document.querySelector('input[name = "weather"]:checked')) {
+	   weather = parseInt(document.querySelector('input[name = "weather"]:checked').value);
+       }
+       else {
+           weather = 0;
+       }
+           
+	   if(document.querySelector('input[name = "activity"]:checked')) {
+	  activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
+         }
+       else {
+           activity = 0;
+       }
+	   
+       if(document.querySelector('input[name = "subj"]:checked')) {     
+	  subj = parseInt(document.querySelector('input[name = "subj"]:checked').value);
+      }
+       else {
+            subj = 0;
+           }
+	   
+    total= weather + activity + subj;
+	     
+
+	   if(total == 3) {
+document.getElementById("answer2").innerHTML = "Country Music";
+}
+	   
+ if(total == 4) {
+document.getElementById("answer2").innerHTML = "Indie Music";
+}
+
+ if(total == 5) {
+document.getElementById("answer2").innerHTML = "Folk Music";
+}
+
+ if(total == 6) {
+document.getElementById("answer2").innerHTML = "Blues";
+}
+
+ if(total == 7) {
+document.getElementById("answer2").innerHTML = "Punk Rock";
+}
+
+ if(total == 8) {
+document.getElementById("answer2").innerHTML = "Pop Music";
+}
+
+ if(total == 9) {
+document.getElementById("answer2").innerHTML = "Classical Music";
+}
+	   
+    return false; 
+	   }
+	
+
+</script>
+
+</body>
+</html>
