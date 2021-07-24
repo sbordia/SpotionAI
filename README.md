@@ -1,2 +1,3 @@
 # Spotion
 
+SpotionAI is a web app that detects your emotions, and based on what emotion it thinks you are, returns a playlist and song selection appropriate for that mood. For example, if you are detected as happy, we hand select happy playlists and songs for you to enjoy. Another feature our web app contains is a genre picker, which used algorithms and past tests to find out what type of genre would suit what type of person, based on how that person answers three questions we give it. We used Javascript, HTML, CSS, and Bootstrap.
